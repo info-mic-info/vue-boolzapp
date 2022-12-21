@@ -13,20 +13,34 @@ ul {
 
 i {
     padding: 0 5px;
+    color: #b1b1b1;
 }
-
+.text-message i{
+    color: #6b7274;
+}
 aside {
-    border-right: solid 1px grey;
+    border-right: solid 1px #eaeaea;
 }
 
 li{
-    border: solid 1px lightgrey;
+    border: solid 1px #eaeaea;
+}
+
+.bell{
+    background-color: white;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.bell i{
+    color: #8edafc;;
+   text-align: center;
 }
 
 /* ******************************************** */
 
 .background {
-    padding: 20px 70px;
+    padding: 20px 100px;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to top, #dde8e8, #DDDBD1 90%, #009688 90%)
@@ -44,39 +58,54 @@ li{
 }
 
 .windows {
-    background-color: lightgrey;
+    background-color:  #eaeaea;
+    height: 500px;
+   
 }
 
+.first{
+    background-color:  #eaeaea ;
+}
 .first,
 .input-send {
     justify-content: space-between;
 }
 
 .user {
-    width: 40%;
+    width: 30%;
+    background-color: white;
 }
 
 .chat {
     width: 70%;
+    position: relative;
 }
 .notification{
-    background-color: rgb(94, 197, 238);
+    background-color: #8edafc;
+    padding: 10px;
 }
 .chats{
     background-color: white;
 }
 
 .chats li:hover{
-    background-color: lightgray;
+    background-color: #eaeaea;
 }
 
 .text-message {
-    padding: 5px;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
 }
 
 .message-chat {
+    width: 100%;
+    background-image: url("/img/mine.jpg");
+   
+    position: relative;
     height: 300px;
-    background-color: bisque;
+  
 }
 
 .message-me {
@@ -87,6 +116,7 @@ li{
 
 .message-friend {
     background-color: white;
+
 }
 
 .col-50 {
@@ -98,11 +128,20 @@ li{
 .message-me {
     border-radius: 5px;
     padding: 5px;
+    width: 40%;
 }
 
 .flex{
     display: flex;
     justify-content: space-between;
 
+}
+
+ .friend-chat{
+    padding-top: 100px;
+ }
+.write{
+    width: 100%;
+    
 }
 

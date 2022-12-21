@@ -41,7 +41,9 @@
 
 
                     <div class="notification">
-                        <p><i class="fa-solid fa-bell-slash"></i></p>
+                        <div class="bell">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
                         <div class="description">
                             <p>Ricevi notifiche di nuovi messaggi</p>
                             <a href="">Attiva notifiche desktop</a>
@@ -49,27 +51,20 @@
                     </div>
 
                     <section class="second">
-                        <input type="text">
+                        <input class="write" type="text" placeholder="Cerca o Inizia una nuova chat">
                     </section>
 
                     <section class="chats">
                         <ul>
-                            <!-- <li 
-                            
-                            v-for="(elem, index) in contacts" 
-                            :class="contacts[index].visible ? `flex` : `` " > 
-                            {{contacts[index].avatar }}  {{ contacts[index].name }}
 
-                        </li> -->
-
-                            <li v-for="(elem, index) in contacts" 
-                            :class="contacts[index].visible ? `flex` : `` ">
-                               <div>{{contacts[index].avatar }} {{ contacts[index].name }}
-                                    <p>Ultimo messaggio inviato</p></div>
+                            <li v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
+                                <div>{{contacts[index].avatar }} {{ contacts[index].name }}
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
                                 <div class="example">
                                     <p>12:00</p>
                                 </div>
-                                
+
 
                             </li>
 
@@ -107,7 +102,7 @@
 
                             <div class="friend-chat">
                                 <div class="friend-text">
-                                    <div class="message-friend">Friend</div>
+                                    <div class="message-friend">Tutto fatto!</div>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +111,8 @@
                         <div class="col-50">
                             <div class="me-chat">
                                 <div class="me-text">
-                                    <div class="message-me">Me</div>
-                                    <div class="message-me">Me</div>
+                                    <div class="message-me">Hai portato a spasso il cane?</div>
+                                    <div class="message-me">Ricordati di stendere i panni</div>
                                 </div>
 
                             </div>
@@ -132,7 +127,9 @@
                     <section class="text-message">
                         <div class="input-send">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input type="text">
+                            <div class="write">
+                                <input class="write" type="text" placeholder="Scrivi messaggio">
+                            </div>
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </section>
