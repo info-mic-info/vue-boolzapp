@@ -2,39 +2,99 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 
-/* TOOL
+/* UTILITY
 ******************************************** */
-ul{
+ul {
     list-style-type: none;
 }
+
+i {
+    padding: 0 5px;
+}
+
+aside {
+    border-right: solid 1px grey;
+}
+
 /* ******************************************** */
 
 .background {
+    padding: 20px 70px;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top, #dde8e8, #DDDBD1 95%, #009688 95%)
+    background: linear-gradient(to top, #dde8e8, #DDDBD1 90%, #009688 90%)
 }
 
-.windows, .first, .info-user, .setting-user, .setting-user ul, .notification, .text-message{
-    display: flex;  
+.windows,
+.first,
+.info-user,
+.setting-user,
+.setting-user ul,
+.notification,
+.input-send,
+.message-chat {
+    display: flex;
 }
 
-.windows{
-   margin: 20px 70px;
-   background-color: lightgrey;
+.windows {
+    background-color: lightgrey;
 }
 
-.first, .text-message{
+.first,
+.input-send {
     justify-content: space-between;
 }
 
 .user {
-    width: 30%;
+    width: 40%;
 }
 
 .chat {
     width: 70%;
-} 
+}
+.notification{
+    background-color: rgb(94, 197, 238);
+}
+.chats{
+    background-color: white;
+}
+
+.chats li:hover{
+    background-color: lightgray;
+}
+
+.text-message {
+    padding: 5px;
+}
+
+.message-chat {
+    height: 300px;
+}
+
+.message-me {
+    background-color: lightgreen;
+    margin-top: 10px;
+
+}
+
+.message-friend {
+    background-color: white;
+}
+
+.col-50 {
+    margin: 0 30px;
+    width: 50%;
+}
+
+.message-friend,
+.message-me {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.flex{
+
+}

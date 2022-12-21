@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -23,25 +26,25 @@
                         <!-- Foto e nome user -->
                         <div class="info-user">
                             <p>Foto</p>
-                            <p>Nome</p>
+                            <p>Sofia</p>
                         </div>
 
                         <!-- Setting user -->
                         <div class="setting-user">
                             <ul>
-                                <li>icona</li>
-                                <li>icona</li>
-                                <li>icona</li>
+                                <li><i class="fa-solid fa-circle-notch"></i></li>
+                                <li><i class="fa-solid fa-message"></i></li>
+                                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
                             </ul>
                         </div>
                     </section>
 
 
                     <div class="notification">
-                        <p>icona</p>
+                        <p><i class="fa-solid fa-bell-slash"></i></p>
                         <div class="description">
-                            <p>lorem lorem</p>
-                            <p>lorem lorem</p>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="">Attiva notifiche desktop</a>
                         </div>
                     </div>
 
@@ -49,16 +52,16 @@
                         <input type="text">
                     </section>
 
-                    <section class="third">
+                    <section class="chats">
                         <ul>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
-                            <li>Nome</li>
+                            <li 
+                            v-for="(elem, index) in contacts" 
+                            :class="contacts[index].visible ? `flex` : `` " > 
+                            {{contacts[index].avatar }} <h4>{{ contacts[index].name }}</h4>
+                            <p>Ultimo messaggio inviato</p>
+                            <p>12:00</p>
+                        </li>
+
                         </ul>
                     </section>
 
@@ -72,32 +75,53 @@
                         <!-- Foto e nome user -->
                         <div class="info-user">
                             <p>Foto</p>
-                            <p>Nome</p>
+                            <p>Michele</p>
                         </div>
 
                         <!-- Setting user -->
                         <div class="setting-user">
                             <ul>
-                                <li>icona</li>
-                                <li>icona</li>
-                                <li>icona</li>
+                                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                                <li><i class="fa-solid fa-paperclip"></i></li>
+                                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
                             </ul>
                         </div>
                     </section>
 
                     <section class="message-chat">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe explicabo placeat quod neque, alias aliquam non sunt! Consequatur a vitae molestiae alias sunt impedit amet pariatur porro exercitationem esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quidem asperiores dolor cum quisquam at sit saepe, adipisci molestias quam placeat sint unde error voluptas doloribus mollitia exercitationem excepturi animi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident quaerat velit voluptate consequatur non nisi architecto odio debitis voluptates maxime quis eius minus, ad reiciendis? Eligendi, natus! Quia, nemo molestiae. </p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe explicabo placeat quod neque, alias aliquam non sunt! Consequatur a vitae molestiae alias sunt impedit amet pariatur porro exercitationem esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quidem asperiores dolor cum quisquam at sit saepe, adipisci molestias quam placeat sint unde error voluptas doloribus mollitia exercitationem excepturi animi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident quaerat velit voluptate consequatur non nisi architecto odio debitis voluptates maxime quis eius minus, ad reiciendis? Eligendi, natus! Quia, nemo molestiae. </p>
+                        <div class="col-50">
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe explicabo placeat quod neque, alias aliquam non sunt! Consequatur a vitae molestiae alias sunt impedit amet pariatur porro exercitationem esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quidem asperiores dolor cum quisquam at sit saepe, adipisci molestias quam placeat sint unde error voluptas doloribus mollitia exercitationem excepturi animi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident quaerat velit voluptate consequatur non nisi architecto odio debitis voluptates maxime quis eius minus, ad reiciendis? Eligendi, natus! Quia, nemo molestiae. </p>
+                            <div class="friend-chat">
+                                <div class="friend-text">
+                                    <div class="message-friend">Friend</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-50">
+                            <div class="me-chat">
+                                <div class="me-text">
+                                    <div class="message-me">Me</div>
+                                    <div class="message-me">Me</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
 
                     </section>
 
                     <section class="text-message">
-                        <p>Smile</p>
-                        <input type="text">
-                        <p>Microfone</p>
+                        <div class="input-send">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <input type="text">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
                     </section>
 
                 </div>
