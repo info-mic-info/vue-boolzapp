@@ -28,7 +28,9 @@
                             <div class="image">
                                 <img src="./img/avatar_io.jpg" alt="">
                             </div>
-                            <p>Sofia</p>
+                            <div class=“my-name“>
+                                <h4>Sofia</h4>
+                            </div>
                         </div>
 
                         <!-- Setting user -->
@@ -60,10 +62,20 @@
                         <ul>
 
                             <li v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
-                                <div class="image"> <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'" alt="">
-                                    {{ contacts[index].name }}
-                                    <p>Ultimo messaggio inviato</p>
+
+                                <div class="avatar">
+
+                                    <div class="image"> <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'"
+                                            alt="">
+                                    </div>
+
+                                    <div class="name-access">
+                                        <h4>{{ contacts[index].name }}</h4>
+                                        <p>Ultimo messaggio inviato</p>
+                                    </div>
                                 </div>
+
+
                                 <div class="example">
                                     <p>12:00</p>
                                 </div>
@@ -84,8 +96,11 @@
                     <section class="first">
                         <!-- Foto e nome user -->
                         <div class="info-user">
-                            <p>Foto</p>
-                            <p>Michele</p>
+                            <div class="image">
+                                <img src="./img/avatar_io.jpg" alt="">
+                            </div>
+                            <h4>Michele</h4>
+                            <p>Ultimo accesso alle 12:00</p>
                         </div>
 
                         <!-- Setting user -->
@@ -115,6 +130,12 @@
                                 <div class="me-text">
                                     <div class="message-me">Hai portato a spasso il cane?</div>
                                     <div class="message-me">Ricordati di stendere i panni</div>
+
+                                    
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae fugiat omnis. Magni, repellendus. Ad, voluptatibus! Repudiandae debitis quisquam qui labore voluptate, vero magni sapiente eligendi facere doloremque totam dicta!</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias nisi labore ipsum aliquam unde eveniet laborum inventore dolores ratione hic, voluptas, cum nam perferendis at modi minima reprehenderit. Mollitia, commodi!</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto placeat delectus, commodi, inventore dicta dignissimos, similique veritatis sed consequatur sapiente possimus eligendi asperiores porro aliquid dolorem fugit obcaecati iusto quisquam.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aperiam provident asperiores quam placeat modi, ratione saepe non eveniet nobis tempore porro expedita, repudiandae eos tempora accusamus consequatur ex dolore.</p>
                                 </div>
 
                             </div>
