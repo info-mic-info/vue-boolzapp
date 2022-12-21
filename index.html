@@ -25,7 +25,9 @@
                     <section class="first">
                         <!-- Foto e nome user -->
                         <div class="info-user">
-                            <p>Foto</p>
+                            <div class="image">
+                                <img src="./img/avatar_io.jpg" alt="">
+                            </div>
                             <p>Sofia</p>
                         </div>
 
@@ -58,7 +60,8 @@
                         <ul>
 
                             <li v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
-                                <div>{{contacts[index].avatar }} {{ contacts[index].name }}
+                                <div class="image"> <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'" alt="">
+                                    {{ contacts[index].name }}
                                     <p>Ultimo messaggio inviato</p>
                                 </div>
                                 <div class="example">
@@ -67,7 +70,6 @@
 
 
                             </li>
-
 
 
                         </ul>

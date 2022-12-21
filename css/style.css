@@ -15,26 +15,34 @@ i {
     padding: 0 5px;
     color: #b1b1b1;
 }
-.text-message i{
+
+.text-message i {
     color: #6b7274;
 }
+
 aside {
     border-right: solid 1px #eaeaea;
 }
 
-li{
+li {
     border: solid 1px #eaeaea;
 }
 
-.bell{
+.bell {
     background-color: white;
     border-radius: 100%;
     padding: 5px;
 }
 
-.bell i{
-    color: #8edafc;;
-   text-align: center;
+.bell i {
+    color: #8edafc;
+    ;
+    text-align: center;
+}
+
+.image img {
+    width: 30px;
+    border-radius: 100%;
 }
 
 /* ******************************************** */
@@ -58,14 +66,15 @@ li{
 }
 
 .windows {
-    background-color:  #eaeaea;
+    background-color: #eaeaea;
     height: 500px;
-   
+
 }
 
-.first{
-    background-color:  #eaeaea ;
+.first {
+    background-color: #eaeaea;
 }
+
 .first,
 .input-send {
     justify-content: space-between;
@@ -80,32 +89,36 @@ li{
     width: 70%;
     position: relative;
 }
-.notification{
+
+.notification {
     background-color: #8edafc;
     padding: 10px;
 }
-.chats{
+
+.chats {
     background-color: white;
 }
 
-.chats li:hover{
+.chats li:hover {
     background-color: #eaeaea;
 }
 
 .text-message {
- position: absolute;
- bottom: 0;
- left: 0;
- right: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: yellow;
+    width: 100%;
 }
 
 .message-chat {
     width: 100%;
-    background-image: url("/img/mine.jpg");
-   
+    background-image: url(../img/mine.jpg);
     position: relative;
-    height: 300px;
-  
+    height: auto;
+
 }
 
 .message-me {
@@ -131,17 +144,21 @@ li{
     width: 40%;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: space-between;
 
 }
 
- .friend-chat{
+.friend-chat {
     padding-top: 100px;
- }
-.write{
-    width: 100%;
-    
 }
 
+.write {
+    width: 100%;
+}
+
+.input-send {
+    height: 40px;
+    align-items: center;
+}
