@@ -19,6 +19,10 @@ aside {
     border-right: solid 1px grey;
 }
 
+li{
+    border: solid 1px lightgrey;
+}
+
 /* ******************************************** */
 
 .background {
@@ -72,6 +76,7 @@ aside {
 
 .message-chat {
     height: 300px;
+    background-color: bisque;
 }
 
 .message-me {
