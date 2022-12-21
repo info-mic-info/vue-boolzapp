@@ -64,8 +64,12 @@
 
                             <li v-for="(elem, index) in contacts" 
                             :class="contacts[index].visible ? `flex` : `` ">
-                                {{contacts[index].avatar }} {{ contacts[index].name }}
-                                <p>Ultimo messaggio inviato</p>
+                               <div>{{contacts[index].avatar }} {{ contacts[index].name }}
+                                    <p>Ultimo messaggio inviato</p></div>
+                                <div class="example">
+                                    <p>12:00</p>
+                                </div>
+                                
 
                             </li>
 

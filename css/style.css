@@ -95,7 +95,9 @@ aside {
     padding: 5px;
 }
 
-.example{
+.flex{
     display: flex;
+    justify-content: space-between;
 
 }
+
