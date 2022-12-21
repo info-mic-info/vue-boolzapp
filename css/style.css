@@ -1,5 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: solid 1px black;
 }
+
+/* TOOL
+******************************************** */
+ul{
+    list-style-type: none;
+}
+/* ******************************************** */
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #dde8e8, #DDDBD1 95%, #009688 95%)
+}
+
+.windows, .first, .info-user, .setting-user, .setting-user ul, .notification, .text-message{
+    display: flex;  
+}
+
+.windows{
+   margin: 20px 70px;
+   background-color: lightgrey;
+}
+
+.first, .text-message{
+    justify-content: space-between;
+}
+
+.user {
+    width: 30%;
+}
+
+.chat {
+    width: 70%;
+} 
