@@ -95,6 +95,7 @@ aside {
     padding: 5px;
 }
 
-.flex{
+.example{
+    display: flex;
 
 }

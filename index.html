@@ -54,13 +54,22 @@
 
                     <section class="chats">
                         <ul>
-                            <li 
+                            <!-- <li 
+                            
                             v-for="(elem, index) in contacts" 
                             :class="contacts[index].visible ? `flex` : `` " > 
-                            {{contacts[index].avatar }} <h4>{{ contacts[index].name }}</h4>
-                            <p>Ultimo messaggio inviato</p>
-                            <p>12:00</p>
-                        </li>
+                            {{contacts[index].avatar }}  {{ contacts[index].name }}
+
+                        </li> -->
+
+                            <li v-for="(elem, index) in contacts" 
+                            :class="contacts[index].visible ? `flex` : `` ">
+                                {{contacts[index].avatar }} {{ contacts[index].name }}
+                                <p>Ultimo messaggio inviato</p>
+
+                            </li>
+
+
 
                         </ul>
                     </section>
