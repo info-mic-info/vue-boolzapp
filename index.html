@@ -65,30 +65,24 @@
                                 :class="contacts[index].visible ? `flex` : `` ">
 
                                 <div class="avatar">
-
                                     <div class="image"> <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'"
                                             alt="">
                                     </div>
-
+                                    <!-- contacts[index]=elem -->
                                     <div class="name-access">
-                                        <h4>{{ contacts[index].name }}</h4>
-                                        <p >Ultimo messaggio inviato</p>
+                                        <!-- <h4>{{ contacts[index].name }}</h4> -->
+                                        <h4>{{ elem.name }}</h4>
+                                        <p>Ultimo messaggio inviato </p>
                                     </div>
                                 </div>
 
 
                                 <div class="example">
-                                    <p v-for="(elem, index) in contacts[index].messages">{{elem.date}}</p>
-                                     <!-- QUESTO -->
-
+                                    <!-- <h1>{{contacts[index].messages[0].date}}</h1> -->
+                                    <p>{{elem.messages[elem.messages.length-1].date}}</p>
                                 </div>
-
-                                <!-- contacts.0.messages.0.date
-                                contacts.0.messages.2.date -->
                             </li>
-
-
-                        </ul> 
+                        </ul>
                     </section>
 
                 </aside>
@@ -103,9 +97,17 @@
                             <div class="image">
                                 <img :src="'./img/avatar' + contacts[chatActive].avatar + '.jpg'">
                             </div>
-                            <h4>{{ contacts[chatActive].name }}</h4>  
-                            <p>Ultimo accesso alle 12:00 </p>
-                           
+
+                            <div class="d-block">
+                                <h4 class="d-block">{{ contacts[chatActive].name }}</h4>
+                                <p>Ultimo accesso alle {{getLastdate(chatActive)}} </p>
+                            </div>
+
+
+
+
+
+
                         </div>
 
                         <!-- Setting user -->
@@ -131,7 +133,8 @@
 
 
                             <div class="message"
-                                :class="contacts[chatActive].messages[index].status == 'sent' ? 'inviato' : 'ricevuto' "> {{elem.message}} </div>
+                                :class="contacts[chatActive].messages[index].status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                {{elem.message}} </div>
 
 
 
@@ -148,7 +151,7 @@
                         <div class="input-send">
                             <i class="fa-regular fa-face-smile"></i>
                             <div class="write">
-                                <input class="write" type="text" placeholder="Scrivi messaggio">
+                                <input class="write" type="text" placeholder="Scrivi messaggio" v-model="newMessage" @keypress.enter="addMessage(chatActive)">
                             </div>
                             <i class="fa-solid fa-microphone"></i>
                         </div>

@@ -181,30 +181,39 @@ li {
     height: calc(100% - 42px);
     max-height: 400px;
     overflow-y: scroll;
+
 }
 
 
 
 
 .inviato {
+    float: right;
     background-color: greenyellow;
-    width: 40%;
     border-radius: 5px;
     margin-top: 10px;
-    justify-content: end;
+    padding: 10px;
+  
 
 }
 
 .ricevuto {
+    
     background-color: white;
     border-radius: 5px;
     margin-top: 10px;
     width: 20%;
+    padding: 10px;
 
 }
 
 .me-text{
     width: 100%;
+    padding: 10px 40px;
   
+}
+
+.d-block{
+    display: block;
 }
 
