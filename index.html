@@ -127,15 +127,13 @@
 
                         <div class="col-50">
                             <div class="me-chat">
-                                <div class="me-text">
-                                    <div class="message-me">Hai portato a spasso il cane?</div>
-                                    <div class="message-me">Ricordati di stendere i panni</div>
+                                <!-- <div class="me-text" v-for="(elem, index) in contacts" :class="contacts[index].visible ? `prova` : `` "> -->
 
-                                    
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At repudiandae fugiat omnis. Magni, repellendus. Ad, voluptatibus! Repudiandae debitis quisquam qui labore voluptate, vero magni sapiente eligendi facere doloremque totam dicta!</p>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias nisi labore ipsum aliquam unde eveniet laborum inventore dolores ratione hic, voluptas, cum nam perferendis at modi minima reprehenderit. Mollitia, commodi!</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto placeat delectus, commodi, inventore dicta dignissimos, similique veritatis sed consequatur sapiente possimus eligendi asperiores porro aliquid dolorem fugit obcaecati iusto quisquam.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aperiam provident asperiores quam placeat modi, ratione saepe non eveniet nobis tempore porro expedita, repudiandae eos tempora accusamus consequatur ex dolore.</p>
+                                <div class="me-text" v-for="(elem, index) in contacts"
+                                    :class="contacts[index].visible ? `prova` : `` ">
+
+                                    <div class="message-me">{{elem.messages}}</div>
+
                                 </div>
 
                             </div>
