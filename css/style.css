@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* border: solid 1px black; */
+    border: solid 1px black;
 }
 
 /* UTILITY
@@ -74,7 +74,7 @@ li {
 .setting-user ul,
 .notification,
 .input-send,
-.message-chat {
+.message-chat, .message {
     display: flex;
 }
 
@@ -152,7 +152,7 @@ li {
 
 .col-50 {
     margin: 0 30px;
-    width: 50%;
+    width: 80%;
 }
 
 .message-friend,
@@ -192,4 +192,16 @@ li {
 .info-user{
     justify-content: center;
     align-items: center;
+}
+
+.inviato{
+background-color: greenyellow;
+justify-content: end;
+
+width: 100%;
+}
+
+.ricevuto{
+    background-color: white;
+    
 }

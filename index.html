@@ -61,7 +61,7 @@
                     <section class="chats">
                         <ul>
 
-                            <li v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
+                            <li @click="selectcontact(index)" v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
 
                                 <div class="avatar">
 
@@ -115,24 +115,19 @@
 
                     <section class="message-chat">
 
-                        <div class="col-50">
-
-                            <div class="friend-chat">
-                                <div class="friend-text">
-                                    <div class="message-friend">Tutto fatto!</div>
-                                </div>
-                            </div>
-                        </div>
 
 
                         <div class="col-50">
                             <div class="me-chat">
                                 <!-- <div class="me-text" v-for="(elem, index) in contacts" :class="contacts[index].visible ? `prova` : `` "> -->
 
-                                <div class="me-text" v-for="(elem, index) in contacts"
-                                    :class="contacts[index].visible ? `prova` : `` ">
+                                <div class="me-text" v-for="(elem, index) in contacts[chatActive].messages">
 
-                                    <div class="message-me">{{elem.messages}} </div>
+                                    
+                                    
+                                    <div class="message" :class="contacts[chatActive].messages[index].status == 'sent' ? 'inviato' : 'ricevuto' ">
+                                        <div class="message-me">{{elem.message}} </div>
+                                    </div>
 
                                 </div>
 
