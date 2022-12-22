@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             chatActive: 0,
+            newMessage: ``,
             contacts: [
                 {
                     name: 'Michele',
@@ -192,7 +193,7 @@ splitDate(date){
                 status: 'sent'
             },
 
-            this.contact[index].messages.push(newObject)
+            this.contact[this.chatActive].messages.push(newObject)
             this.newMessage = ""
             setTimeout(() => {
                 newObjResponder ={
