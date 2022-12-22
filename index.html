@@ -61,7 +61,8 @@
                     <section class="chats">
                         <ul>
 
-                            <li @click="selectcontact(index)" v-for="(elem, index) in contacts" :class="contacts[index].visible ? `flex` : `` ">
+                            <li @click="selectcontact(index)" v-for="(elem, index) in contacts"
+                                :class="contacts[index].visible ? `flex` : `` ">
 
                                 <div class="avatar">
 
@@ -71,20 +72,23 @@
 
                                     <div class="name-access">
                                         <h4>{{ contacts[index].name }}</h4>
-                                        <p>Ultimo messaggio inviato</p>
+                                        <p >Ultimo messaggio inviato</p>
                                     </div>
                                 </div>
 
 
                                 <div class="example">
-                                    <p>12:00</p>
+                                    <p v-for="(elem, index) in contacts[index].messages">{{elem.date}}</p>
+                                     <!-- QUESTO -->
+
                                 </div>
 
-
+                                <!-- contacts.0.messages.0.date
+                                contacts.0.messages.2.date -->
                             </li>
 
 
-                        </ul>
+                        </ul> 
                     </section>
 
                 </aside>
@@ -97,10 +101,11 @@
                         <!-- Foto e nome user -->
                         <div class="info-user">
                             <div class="image">
-                                <img src="./img/avatar_io.jpg" alt="">
+                                <img :src="'./img/avatar' + contacts[chatActive].avatar + '.jpg'">
                             </div>
-                            <h4>Michele</h4>
-                            <p>Ultimo accesso alle 12:00</p>
+                            <h4>{{ contacts[chatActive].name }}</h4>  
+                            <p>Ultimo accesso alle 12:00 </p>
+                           
                         </div>
 
                         <!-- Setting user -->
@@ -117,22 +122,21 @@
 
 
 
-                        <div class="col-50">
-                            <div class="me-chat">
-                                <!-- <div class="me-text" v-for="(elem, index) in contacts" :class="contacts[index].visible ? `prova` : `` "> -->
 
-                                <div class="me-text" v-for="(elem, index) in contacts[chatActive].messages">
 
-                                    
-                                    
-                                    <div class="message" :class="contacts[chatActive].messages[index].status == 'sent' ? 'inviato' : 'ricevuto' ">
-                                        <div class="message-me">{{elem.message}} </div>
-                                    </div>
 
-                                </div>
 
-                            </div>
+                        <div class="me-text" v-for="(elem, index) in contacts[chatActive].messages">
+
+
+
+                            <div class="message"
+                                :class="contacts[chatActive].messages[index].status == 'sent' ? 'inviato' : 'ricevuto' "> {{elem.message}} </div>
+
+
+
                         </div>
+
 
 
 

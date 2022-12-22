@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 
 /* UTILITY
@@ -74,13 +74,14 @@ li {
 .setting-user ul,
 .notification,
 .input-send,
-.message-chat, .message {
+.message-chat,
+.message {
     display: flex;
 }
 
 .windows {
     background-color: #eaeaea;
-  
+
 
 }
 
@@ -130,37 +131,15 @@ li {
     width: 100%;
 }
 
-.message-chat {
-    width: 100%;
-    background-image: url(../img/mine.jpg);
-    position: relative;
-    height: calc(100% - 42px);
-    max-height: 400px;
-    overflow-y: scroll;
-}
 
-.message-me {
-    background-color: lightgreen;
-    margin-top: 10px;
 
-}
 
-.message-friend {
-    background-color: white;
-
-}
 
 .col-50 {
     margin: 0 30px;
     width: 80%;
 }
 
-.message-friend,
-.message-me {
-    border-radius: 5px;
-    padding: 5px;
-    width: 40%;
-}
 
 .flex {
     display: flex;
@@ -189,19 +168,43 @@ li {
     display: flex;
 }
 
-.info-user{
+.info-user {
     justify-content: center;
     align-items: center;
 }
 
-.inviato{
-background-color: greenyellow;
-justify-content: end;
-
-width: 100%;
+.message-chat {
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../img/mine.jpg);
+    position: relative;
+    height: calc(100% - 42px);
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
-.ricevuto{
+
+
+
+.inviato {
+    background-color: greenyellow;
+    width: 40%;
+    border-radius: 5px;
+    margin-top: 10px;
+    justify-content: end;
+
+}
+
+.ricevuto {
     background-color: white;
-    
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 20%;
+
 }
+
+.me-text{
+    width: 100%;
+  
+}
+
