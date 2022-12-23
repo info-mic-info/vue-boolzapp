@@ -172,7 +172,7 @@ createApp({
         let filteredTask;
         if (this.search != '') {
             filteredTask = this.contacts.filter((elem) => {
-                return elem.contacts.tolowercase().includes(this.search.tolowercase())
+                return elem.contacts.toLowerCase().includes(this.search.toLowerCase())
             })
         }
         else{
