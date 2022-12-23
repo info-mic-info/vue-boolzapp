@@ -174,7 +174,7 @@ createApp({
             filteredTask = this.contacts.filter((elem) => {
                 return elem.contacts.toLowerCase().includes(this.search.toLowerCase())
             })
-        }
+        }  
         else{
             filteredTask = this.contacts
         }
