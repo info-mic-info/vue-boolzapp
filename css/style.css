@@ -30,6 +30,10 @@ i {
     color: #6b7274;
 }
 
+.second{
+    background-color: #eaeaea;
+    padding: 10px;
+}
 aside {
     border-right: solid 1px #eaeaea;
 }
@@ -43,11 +47,17 @@ li {
     background-color: white;
     border-radius: 100%;
     padding: 5px;
+    width: 50px;
+    margin-right: 5px;
+    position: relative;
 }
 
 .bell i {
     color: #8edafc;
-    ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
@@ -179,7 +189,7 @@ li {
     background-image: url(../img/mine.jpg);
     position: relative;
     height: calc(100% - 40px);
-    max-height: 350px;
+    max-height: 360px;
     overflow-y: scroll;
 
 }
