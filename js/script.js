@@ -167,42 +167,56 @@ createApp({
 
         }
     },
-    methods: {
-        selectcontact(index) {
-            this.chatActive = index
-        },
-
-splitDate(date){
-    let newDate = date.split(" ")[1].substring(0,5)
-    return newDate
-
-},
-
-        getLastdate(i) {
-            let messages = this.contacts[i].messages
-            let newDate = messages [messages.length-1].date
-            newDate = this.splitDate(newDate)
-            return newDate
-        },
-
-        addMessage(index){
-            let newObject =
-            {
-                date: '10/01/2020 15:50:00',
-                message: this.newMessage,
-                status: 'sent'
-            }
-console.log(this.chatActive)
-            this.contacts[this.chatActive].messages.push(newObject)
-            this.newMessage = ""
-            setTimeout(() => {
-                newObjResponder ={
-                    date: '10/01/2020 15:50:00',
-                    message: 'ok',
-                    status: 'received'
-                },
-                this.contacts[index].messages.push(newObjResponder)
-            },1000)
+    computed:{
+    searchTask() {
+        let filteredTask;
+        if (this.search != '') {
+            filteredTask = this.name.filter((elem) => {
+                return elem.name.tolowercase().includes(this.search.tolowercase())
+            })
         }
+        else{
+            filteredTask = this.name
+        }
+return filteredTask
+    }
+},
+    methods: {
+    selectcontact(index) {
+        this.chatActive = index
     },
+
+    splitDate(date) {
+        let newDate = date.split(" ")[1].substring(0, 5)
+        return newDate
+
+    },
+
+    getLastdate(i) {
+        let messages = this.contacts[i].messages
+        let newDate = messages[messages.length - 1].date
+        newDate = this.splitDate(newDate)
+        return newDate
+    },
+
+    addMessage(index) {
+        let newObject =
+        {
+            date: '10/01/2020 15:50:00',
+            message: this.newMessage,
+            status: 'sent'
+        }
+        console.log(this.chatActive)
+        this.contacts[this.chatActive].messages.push(newObject)
+        this.newMessage = ""
+        setTimeout(() => {
+            newObjResponder = {
+                date: '10/01/2020 15:50:00',
+                message: 'ok',
+                status: 'received'
+            },
+                this.contacts[index].messages.push(newObjResponder)
+        }, 1000)
+    }
+},
 }).mount('#app')
