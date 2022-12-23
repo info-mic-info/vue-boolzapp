@@ -186,14 +186,14 @@ splitDate(date){
         },
 
         addMessage(index){
-            newObject =
+            let newObject =
             {
                 date: '10/01/2020 15:50:00',
                 message: this.newMessage,
                 status: 'sent'
-            },
-
-            this.contact[this.chatActive].messages.push(newObject)
+            }
+console.log(this.chatActive)
+            this.contacts[this.chatActive].messages.push(newObject)
             this.newMessage = ""
             setTimeout(() => {
                 newObjResponder ={
