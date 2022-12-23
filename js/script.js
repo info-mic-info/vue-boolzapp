@@ -171,12 +171,12 @@ createApp({
     searchTask() {
         let filteredTask;
         if (this.search != '') {
-            filteredTask = this.name.filter((elem) => {
-                return elem.name.tolowercase().includes(this.search.tolowercase())
+            filteredTask = this.contacts.filter((elem) => {
+                return elem.contacts.tolowercase().includes(this.search.tolowercase())
             })
         }
         else{
-            filteredTask = this.name
+            filteredTask = this.contacts
         }
 return filteredTask
     }
