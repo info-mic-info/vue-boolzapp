@@ -178,8 +178,8 @@ li {
     width: 100%;
     background-image: url(../img/mine.jpg);
     position: relative;
-    height: calc(100% - 42px);
-    max-height: 400px;
+    height: calc(100% - 40px);
+    max-height: 350px;
     overflow-y: scroll;
 
 }
