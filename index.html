@@ -55,17 +55,17 @@
                     </div>
 
                     <section class="second">
-                        <input class="write" type="text" placeholder=" Cerca o Inizia una nuova chat" @keyup.enter=" searchTask(chatActive)">
+                        <input class="write" type="text" placeholder=" Cerca o Inizia una nuova chat" v-model="search">
                     </section>
 
                     <section class="chats">
                         <ul>
 
-                            <li @click="selectcontact(index)" v-for="(elem, index) in contacts"
-                                :class="contacts[index].visible ? `flex` : `` ">
+                            <li @click="selectcontact(index)" v-for="(elem, index) in filteredContacts"
+                                :class="elem.visible ? `flex` : `` ">
 
                                 <div class="avatar">
-                                    <div class="image"> <img :src="'./img/avatar' + contacts[index].avatar + '.jpg'"
+                                    <div class="image"> <img :src="'./img/avatar' + elem.avatar + '.jpg'"
                                             alt="">
                                     </div>
                                     <!-- contacts[index]=elem -->
